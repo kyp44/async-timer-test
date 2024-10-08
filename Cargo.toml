@@ -1,0 +1,14 @@
+[package]
+edition = "2021"
+name = "async-timer-test"
+version = "0.1.0"
+
+[patch.crates-io]
+atsamd-hal = {path = "../atsamd/hal"}
+pygamer = {path = "../atsamd/boards/pygamer"}
+
+[dependencies]
+atsamd-hal = {version = "0.17.0", features = ["async"]}
+cortex-m = {version = "0.7.7", features = ["critical-section-single-core"]}
+pygamer = {version = "0.10.0", features = ["panic_led"]}
+rtic = {version = "2.1.1", features = ["thumbv7-backend"]}
